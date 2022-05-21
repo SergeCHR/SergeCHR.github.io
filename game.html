@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Game | Knight's tour</title>
+		<link rel="stylesheet" href="public/style.css" />
+	</head>
+	<body>
+		<a class="backLink" href="index.html">&larr;</a>
+		<div class="container">
+			<h3 class="mainTitle">Knight's tour game</h3>
+			<div id="mainBlock">
+				<div class="controls">
+					<button title="Set random position" id="button" class="button">
+						<i class="fa-solid fa-shuffle"></i>
+					</button>
+					<button title="Clear Desk" id="clear" class="button">
+						<i class="fas fa-trash"></i>
+					</button>
+					<button title="Move forward" id="nextPos" class="button btn">
+						<i class="fa-solid fa-arrow-right"></i>
+					</button>
+					<button title="Move backwards" id="prevPos" class="button btn">
+						<i class="fa-solid fa-arrow-left"></i>
+					</button>
+					<div class="console_container">
+						<button title="Moves" id="toggleMoves" class="button btn movesBtn">
+							<i class="fa-solid fa-shoe-prints"></i>
+						</button>
+						<div id="console"></div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="infoLabel" id="info_btn">i</button>
+			<div id="info_dialog" class="dialog">
+				<p class="dialog_text">
+					<b>Creators: </b><br />
+					<br /><b>Pavlo Dovbush:</b> implementation of the algorythm <br />
+					<b>Serhii Cherneha:</b> implementation of visualization <br /><b
+						>Dymytryi Kiperchuk:</b
+					>
+					content and idea manager
+				</p>
+				<button id="close_dialog" type="button">x</button>
+			</div>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/12d2fd1d04.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="src/chessOOP.js"></script>
+	</body>
+</html>
