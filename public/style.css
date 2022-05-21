@@ -118,16 +118,6 @@ a:active {
 .button:focus {
 	outline: var(--btn-color);
 }
-/* .movesBtn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 1.2em;
-}
-.movesBtn i {
-	width: 1.2em;
-	height: 1.2em;
-} */
 .console_container {
 	position: absolute;
 	transform: translateY(20px);
@@ -149,7 +139,6 @@ a:active {
 	font-size: 25px;
 	text-align: center;
 	overflow: scroll;
-	/* justify-content: center; */
 }
 .visible {
 	display: flex !important;
@@ -254,10 +243,9 @@ a:active {
 
 #cooltoast-container {
 	position: fixed;
-	bottom: 50px;
+	top: 50px;
 	left: 0;
 	width: auto;
-	/*   font-family: 'Helvetica'; */
 }
 
 .cooltoast-toast {
