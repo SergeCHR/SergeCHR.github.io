@@ -193,8 +193,9 @@ a:active {
 	cursor: help;
 	right: 20px;
 	top: 20px;
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
+	font-size: 18px;
 	border: 1px solid #2978ff;
 	color: #2978ff;
 	border-radius: 50%;
