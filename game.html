@@ -6,7 +6,25 @@
 		<link rel="stylesheet" href="public/style.css" />
 	</head>
 	<body>
-		<a class="backLink" href="https://sergechr.github.io">&larr;</a>
+		<nav role="navigation">
+			<div id="menuToggle">
+				<input type="checkbox" />
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					<a href="https://sergechr.github.io">
+						<li>Home</li>
+					</a>
+					<a href="about.html">
+						<li>About Us</li>
+					</a>
+					<a class="tryButton" href="game.html">
+						<li>Go play!</li>
+					</a>
+				</ul>
+			</div>
+		</nav>
 		<div class="container">
 			<h3 class="mainTitle">Knight's tour game</h3>
 			<div id="mainBlock">
@@ -41,6 +59,7 @@
 					>
 					content and idea manager
 				</p>
+				<a href="about.html">Learn More</a>
 				<button id="close_dialog" type="button">x</button>
 			</div>
 		</div>

@@ -191,13 +191,15 @@ a:active {
 	top: 20px;
 	width: 20px;
 	height: 20px;
-	border: 1px solid black;
+	border: 1px solid #2978ff;
+	color: #2978ff;
 	border-radius: 50%;
-	background-color: antiquewhite;
+	background-color: #fff;
 	transition: 0.3s ease-in-out;
 }
 .infoLabel:hover {
-	background-color: white;
+	background-color: #2978ff;
+	color: white;
 }
 
 .dialog {
@@ -207,34 +209,51 @@ a:active {
 	right: 20px;
 	width: 400px;
 	padding: 10px 20px 20px;
-	max-height: 500px;
-	background-color: bisque;
+	/* min-height: 500px; */
+	height: fit-content;
+	background-color: #fafafa;
+	border: 1px solid #2978ff;
 	border-radius: 5px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 	z-index: 110;
+}
+.dialog_text {
+	line-height: 24px;
+	margin-bottom: 40px;
+}
+.dialog b {
+	color: #2978ff;
 }
 .dialog button {
 	position: fixed;
 	cursor: pointer;
 	top: 60px;
 	right: 30px;
-	border: 1px solid black;
+	border: 1px solid #2978ff;
+	color: #2978ff;
 	background-color: transparent;
 	border-radius: 50px;
 	transition: 0.3s ease-in-out;
 }
 .dialog button:hover {
-	background-color: white;
+	background-color: #2978ff;
+	color: white;
 }
 .dialog a {
 	font-size: 16px;
 	line-height: 16px;
-	border-bottom: 2px solid white;
 	transition: all 0.3s ease-in-out;
+	padding: 5px 10px;
+	border: 1px solid #2978ff;
+	border-radius: 3px;
+	color: #2978ff;
+	background-color: white;
+	margin-top: 40px;
 }
 
 .dialog a:hover {
-	border-color: #000;
+	background-color: #2978ff;
+	color: white;
 }
 
 .active {
@@ -243,7 +262,7 @@ a:active {
 
 #cooltoast-container {
 	position: fixed;
-	top: 50px;
+	top: 90px;
 	left: 0;
 	width: auto;
 }
@@ -338,12 +357,150 @@ a:active {
 		opacity: 0;
 	}
 }
-.backLink {
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	font-size: 24px;
+#menuToggle {
+	display: block;
+	position: fixed;
+	top: 50px;
+	left: 50px;
+
+	z-index: 1;
+
+	-webkit-user-select: none;
+	user-select: none;
 }
-.backLink:hover {
-	color: var(--btn-color);
+
+#menuToggle a {
+	text-decoration: none;
+	color: #232323;
+
+	transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+	color: #2978ff;
+}
+
+#menuToggle input {
+	display: block;
+	width: 40px;
+	height: 32px;
+	position: fixed;
+	top: -7px;
+	left: -5px;
+	top: 50px;
+	left: 50px;
+	cursor: pointer;
+
+	opacity: 0;
+	z-index: 2;
+
+	-webkit-touch-callout: none;
+}
+
+#menuToggle span {
+	display: block;
+	width: 33px;
+	height: 4px;
+	margin-bottom: 5px;
+	position: relative;
+
+	background: #2978ff;
+	border-radius: 3px;
+
+	z-index: 1;
+
+	transform-origin: 4px 0px;
+
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+		background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+	transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+	transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #0b50c7;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+	opacity: 0;
+	transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+	transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+	position: absolute;
+	width: 300px;
+	margin: -100px 0 0 -50px;
+	padding: 50px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	justify-content: center;
+	flex-direction: column;
+	background: #ededed;
+	list-style-type: none;
+	-webkit-font-smoothing: antialiased;
+	/* to stop flickering of text in safari */
+
+	transform-origin: 0% 0%;
+	transform: translate(-100%, 0);
+
+	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+	padding: 10px 0;
+	font-size: 22px;
+}
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+	transform: none;
+}
+.tryButton {
+	margin: 35px auto 0;
+	display: inline-block;
+	background: #339dff;
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 38px;
+	border-radius: 50px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.5s;
+	width: 170px;
+	text-align: center;
+}
+
+.tryButton:hover {
+	background: #fff;
+	color: #339dff;
+	box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
