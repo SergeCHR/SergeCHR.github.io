@@ -1,5 +1,5 @@
 :root {
-	/* --btn-color: #339dff; */
+	--mainColor: #ff0000;
 	--btn-color: #ff0000;
 }
 
@@ -196,14 +196,14 @@ a:active {
 	width: 25px;
 	height: 25px;
 	font-size: 18px;
-	border: 1px solid #2978ff;
-	color: #2978ff;
+	border: 1px solid var(--mainColor);
+	color: var(--mainColor);
 	border-radius: 50%;
 	background-color: #fff;
 	transition: 0.3s ease-in-out;
 }
 .infoLabel:hover {
-	background-color: #2978ff;
+	background-color: var(--mainColor);
 	color: white;
 }
 
@@ -217,7 +217,7 @@ a:active {
 	/* min-height: 500px; */
 	height: fit-content;
 	background-color: #fafafa;
-	border: 1px solid #2978ff;
+	border: 1px solid var(--mainColor);
 	border-radius: 5px;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 	z-index: 110;
@@ -227,21 +227,21 @@ a:active {
 	margin-bottom: 40px;
 }
 .dialog b {
-	color: #2978ff;
+	color: var(--mainColor);
 }
 .dialog button {
 	position: fixed;
 	cursor: pointer;
 	top: 60px;
 	right: 30px;
-	border: 1px solid #2978ff;
-	color: #2978ff;
+	border: 1px solid var(--mainColor);
+	color: var(--mainColor);
 	background-color: transparent;
 	border-radius: 50px;
 	transition: 0.3s ease-in-out;
 }
 .dialog button:hover {
-	background-color: #2978ff;
+	background-color: var(--mainColor);
 	color: white;
 }
 .dialog a {
@@ -249,15 +249,15 @@ a:active {
 	line-height: 16px;
 	transition: all 0.3s ease-in-out;
 	padding: 5px 10px;
-	border: 1px solid #2978ff;
+	border: 1px solid var(--mainColor);
 	border-radius: 3px;
-	color: #2978ff;
+	color: var(--mainColor);
 	background-color: white;
 	margin-top: 40px;
 }
 
 .dialog a:hover {
-	background-color: #2978ff;
+	background-color: var(--mainColor);
 	color: white;
 }
 
@@ -382,7 +382,7 @@ a:active {
 }
 
 #menuToggle a:hover {
-	color: #2978ff;
+	color: var(--mainColor);
 }
 
 #menuToggle input {
@@ -409,7 +409,7 @@ a:active {
 	margin-bottom: 5px;
 	position: relative;
 
-	background: #2978ff;
+	background: var(--mainColor);
 	border-radius: 3px;
 
 	z-index: 1;
@@ -435,7 +435,7 @@ a:active {
 #menuToggle input:checked ~ span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
-	background: #0b50c7;
+	background: #c70b0b;
 }
 
 /*
@@ -492,7 +492,7 @@ a:active {
 .tryButton {
 	margin: 35px auto 0;
 	display: inline-block;
-	background: #339dff;
+	background: var(--mainColor);
 	color: #fff;
 	text-decoration: none;
 	font-size: 13px;
@@ -503,9 +503,14 @@ a:active {
 	width: 170px;
 	text-align: center;
 }
-
+.tryButton li {
+	color: #fff;
+}
 .tryButton:hover {
 	background: #fff;
-	color: #339dff;
-	box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+	color: var(--mainColor);
+	box-shadow: 0 4px 4px rgba(255, 83, 83, 0.32);
+}
+.tryButton:hover li {
+	color: var(--mainColor);
 }

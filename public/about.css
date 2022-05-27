@@ -1,3 +1,8 @@
+:root {
+	/* --btn-color: #339dff; */
+	--mainColor: #ff0000;
+}
+
 html,
 body {
 	width: 100%;
@@ -20,7 +25,7 @@ h1 {
 h1 span {
 	font-family: 'Satisfy', cursive;
 	font-size: 4rem;
-	color: #2978ff;
+	color: var(--mainColor);
 }
 
 p,
@@ -34,7 +39,7 @@ q {
 }
 
 p {
-	color: #0b50c7;
+	color: #a80303;
 }
 p > span {
 	color: #000;
@@ -86,7 +91,7 @@ p > span {
 	width: auto;
 	margin-top: -1.875rem;
 	padding: 1rem;
-	color: #2978ff;
+	color: var(--mainColor);
 	font-weight: bold;
 	font-size: 3rem;
 	border-radius: 3px;
@@ -104,7 +109,7 @@ p > span {
 /* on hover, add a black bg color with a little bit see-through */
 .prev:hover,
 .next:hover {
-	background-color: #2978ff; /* fallback color */
+	background-color: var(--mainColor); /* fallback color */
 	opacity: 0.8;
 	color: white;
 	text-decoration: none;
@@ -121,7 +126,7 @@ p > span {
 	height: 0.9375rem;
 	width: 0.9375rem;
 	margin: 0 2px;
-	background-color: #2978ff;
+	background-color: var(--mainColor);
 	opacity: 0.4;
 	border-radius: 50%;
 	display: inline-block;
@@ -152,7 +157,7 @@ p > span {
 }
 
 #menuToggle a:hover {
-	color: #2978ff;
+	color: var(--mainColor);
 }
 
 #menuToggle input {
@@ -179,7 +184,7 @@ p > span {
 	margin-bottom: 5px;
 	position: relative;
 
-	background: #2978ff;
+	background: var(--mainColor);
 	border-radius: 3px;
 
 	z-index: 1;
@@ -205,7 +210,7 @@ p > span {
 #menuToggle input:checked ~ span {
 	opacity: 1;
 	transform: rotate(45deg) translate(-2px, -1px);
-	background: #0b50c7;
+	background: #c70b0b;
 }
 
 /*
@@ -262,7 +267,7 @@ p > span {
 .tryButton {
 	margin: 35px auto 0;
 	display: inline-block;
-	background: #339dff;
+	background: var(--mainColor);
 	color: #fff;
 	text-decoration: none;
 	font-size: 13px;
@@ -273,9 +278,14 @@ p > span {
 	width: 170px;
 	text-align: center;
 }
-
+.tryButton li {
+	color: #fff;
+}
 .tryButton:hover {
 	background: #fff;
-	color: #339dff;
-	box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+	color: var(--mainColor);
+	box-shadow: 0 4px 4px rgba(255, 83, 83, 0.32);
+}
+.tryButton:hover li {
+	color: var(--mainColor);
 }
