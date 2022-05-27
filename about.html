@@ -4,9 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="public/about.css" />
 		<title>About Us | Knights tour</title>
 	</head>
-
 	<body>
 		<nav role="navigation">
 			<div id="menuToggle">
@@ -15,7 +15,7 @@
 				<span></span>
 				<span></span>
 				<ul id="menu">
-					<a href="https://sergechr.github.io">
+					<a href="/">
 						<li>Home</li>
 					</a>
 					<a href="about.html">
@@ -27,5 +27,68 @@
 				</ul>
 			</div>
 		</nav>
+		<section class="customer-revs">
+			<div class="rectangle"></div>
+
+			<!-- Slideshow container -->
+			<div class="slideshow-container">
+				<!-- here goes what customers say -->
+				<h1><span>Our Team Members</span></h1>
+
+				<!-- Full-width slides/quotes -->
+				<div class="mySlides">
+					<div class="mySlidesContainer">
+						<div class="authorContainer">
+							<img
+								width="100"
+								height="100"
+								src="public/images/user.webp"
+								alt="User"
+							/><q>
+								Curabitur ligula augue, lobortis in interdum nec, dignissim vel
+								arcu. Donec semper aliquet mattis. Curabitur convallis urna
+								congue viverra elementum.
+							</q>
+						</div>
+					</div>
+					<p class="author">Frontend: <span>Serhii Cherneha</span></p>
+				</div>
+
+				<div class="mySlides">
+					<div class="mySlidesContainer">
+						<q>
+							Vivamus est felis, tempor sed mauris ac, malesuada sollicitudin
+							ipsum. Etiam nec ullamcorper nibh, ac pretium sapien. Donec
+							pharetra sollicitudin ligula, sit amet ornare nisi vestibulum et.
+						</q>
+					</div>
+					<p class="author">Backend: <span>Pavlo Dovbush</span></p>
+				</div>
+
+				<div class="mySlides">
+					<div class="mySlidesContainer">
+						<q>
+							Mauris malesuada, ex at volutpat euismod, velit diam placerat
+							lacus, eu rhoncus enim metus ultricies nisi. Mauris pharetra
+							tristique nisl.</q
+						>
+					</div>
+					<p class="author">Management: <span>Dymytryi Kiperchuk</span></p>
+				</div>
+
+				<!-- Next/prev buttons -->
+				<a class="prev">&#10094;</a>
+				<a class="next">&#10095;</a>
+			</div>
+			<!-- END slidehow-container -->
+
+			<!-- Dots/bullets/indicators -->
+			<div class="dot-container">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+		</section>
 	</body>
+	<script src="src/about.js"></script>
 </html>

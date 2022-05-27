@@ -1,127 +1,136 @@
-* {
+html,
+body {
+	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-body {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #fafafa;
-}
-img {
-	display: block;
-	margin: 0.5em auto;
-	max-width: 100%;
-}
-.container {
 	font-family: sans-serif;
-	max-width: 800px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
 }
-h2 {
-	margin: 20px auto;
+
+body {
+	background: #fafafa;
+}
+
+h1 {
+	font-size: 2.5rem;
 	text-align: center;
-	font-size: 48px;
+	font-weight: 400;
+	margin: 3rem 0 0 0;
+}
+
+h1 span {
+	font-family: 'Satisfy', cursive;
+	font-size: 4rem;
+	color: #2978ff;
+}
+
+p,
+q {
+	font-size: 1.2rem;
+}
+
+q {
 	font-weight: 500;
+	line-height: 1.5rem;
 }
+
 p {
-	margin: 16px 0;
+	color: #0b50c7;
 }
-a,
-a:hover,
-a:active {
+p > span {
 	color: #000;
 }
-.tryButton {
-	margin: 35px auto 0;
-	display: inline-block;
-	background: #339dff;
-	color: #fff;
-	text-decoration: none;
-	font-size: 13px;
-	line-height: 38px;
-	border-radius: 50px;
-	-webkit-transition: all 0.3s;
-	transition: all 0.5s;
-	width: 170px;
+
+.customer-revs {
+	margin: 200px auto 0 auto;
+}
+
+/* slideshow container */
+.slideshow-container {
+	position: relative;
+	width: 60rem;
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+/* Slides */
+.mySlides {
+	display: none;
+	padding: 2rem 5rem 0 5rem;
 	text-align: center;
 }
 
-.tryButton:hover {
-	background: #fff;
-	color: #339dff;
-	box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
+.mySlidesContainer {
+	min-height: 5rem;
+	padding: 3.5rem 2.5rem 2rem 3.5rem;
+	background-color: whitesmoke;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
-.content {
-	margin: 20px 0;
-	padding: 20px 25px;
-	position: relative;
-	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-	transition: all 0.3s ease-in-out;
+.authorContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
 }
-.content p {
-	position: relative;
+.authorContainer img {
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	aspect-ratio: 1;
 }
-.content p::before {
-	content: '';
+
+.prev,
+.next {
+	cursor: pointer;
 	position: absolute;
-	left: -15px;
-	width: 2px;
-	background-color: #2978ff;
-	height: 100%;
+	top: 55%;
+	width: auto;
+	margin-top: -1.875rem;
+	padding: 1rem;
+	color: #2978ff;
+	font-weight: bold;
+	font-size: 3rem;
+	border-radius: 3px;
+	user-select: none;
+	transition: 0.4s;
 }
-.content:hover {
-	box-shadow: 0 2px 2px #2978ff7d;
+
+/* position the "next button" to the right */
+.next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px;
 }
-.content h3 {
-	transition: all 0.3s ease-in-out;
-}
-.content:hover h3,
-.content:hover b {
-	color: #2979ff;
-}
-#return-to-top {
-	position: fixed;
-	bottom: 50px;
-	right: 50px;
-	background: rgb(0, 0, 0);
-	background: rgba(0, 0, 0, 0.7);
-	width: 50px;
-	height: 50px;
-	display: block;
+
+/* on hover, add a black bg color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: #2978ff; /* fallback color */
+	opacity: 0.8;
+	color: white;
 	text-decoration: none;
-	-webkit-border-radius: 35px;
-	-moz-border-radius: 35px;
-	border-radius: 35px;
-	display: none;
-	-webkit-transition: all 0.3s linear;
-	-moz-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
 }
-#return-to-top i {
-	color: #fff;
-	margin: 0;
-	position: relative;
-	left: 18px;
-	top: 15px;
-	font-size: 19px;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
+
+/* the dot/bullet/indicator container */
+.dot-container {
+	text-align: center;
+	padding: 0 1.25rem;
 }
-#return-to-top:hover {
-	background: rgba(0, 0, 0, 0.9);
+
+/* the dots/bullets/indicators */
+.dot {
+	height: 0.9375rem;
+	width: 0.9375rem;
+	margin: 0 2px;
+	background-color: #2978ff;
+	opacity: 0.4;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.4s ease;
 }
-#return-to-top:hover i {
-	color: #fff;
-	top: 5px;
-}
-body {
-	scroll-behavior: smooth;
+
+/* add bg color to the active dot/circle */
+.active {
+	opacity: 1;
 }
 #menuToggle {
 	display: block;
@@ -249,4 +258,24 @@ body {
  */
 #menuToggle input:checked ~ ul {
 	transform: none;
+}
+.tryButton {
+	margin: 35px auto 0;
+	display: inline-block;
+	background: #339dff;
+	color: #fff;
+	text-decoration: none;
+	font-size: 13px;
+	line-height: 38px;
+	border-radius: 50px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.5s;
+	width: 170px;
+	text-align: center;
+}
+
+.tryButton:hover {
+	background: #fff;
+	color: #339dff;
+	box-shadow: 0 4px 4px rgba(83, 100, 255, 0.32);
 }
