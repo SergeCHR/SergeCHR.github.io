@@ -45,6 +45,7 @@ a:active {
 	background: url(images/board.jpg);
 	background-size: cover;
 	flex-wrap: wrap;
+	z-index: 0;
 }
 
 .section {
@@ -58,6 +59,7 @@ a:active {
 	justify-content: center;
 	color: #ff0000;
 	transition: all 0.2s ease-in-out;
+	z-index: 10;
 }
 .scale_up_center {
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53)
@@ -125,7 +127,7 @@ a:active {
 #console {
 	position: absolute;
 	top: 0;
-	left: 90px;
+	left: -320%;
 	border-radius: 5px;
 	background-color: #fff;
 	padding: 12px 32px;
@@ -139,6 +141,7 @@ a:active {
 	font-size: 25px;
 	text-align: center;
 	overflow: scroll;
+	z-index: 10;
 }
 .visible {
 	display: flex !important;
@@ -167,6 +170,7 @@ a:active {
 .controls {
 	position: absolute;
 	right: calc((100vw - 900px) / 2);
+	z-index: 10;
 }
 .backdrop {
 	position: fixed;
